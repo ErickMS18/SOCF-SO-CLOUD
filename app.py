@@ -12,7 +12,7 @@ def info():
         {
             'integrantes':[
             "Erick Maestri de Souza",
-            "Cecília Lucchesi Mardegan"
+            "Cecilia Lucchesi Mardegan"
             ] 
         }
     ])
@@ -33,11 +33,11 @@ def metricas():
     sis = platform.platform()
 
     return (
-        f"Nome: Erick Maestri de Souza\n"
-        f"PID: {pid}\n"
-        f"Memória usada: {mem:.2f} MB\n"
-        f"CPU: {cpu:.2f}%\n"
-        f"Sistema Operacional: {sis}\n"
+        f"| Nome: Erick Maestri de Souza\n"
+        f"| PID: {pid}\n"
+        f"| Memória usada: {mem:.2f} MB\n"
+        f"| CPU: {cpu:.2f}%\n"
+        f"| Sistema Operacional: {sis}\n"
     )
 
 
