@@ -12,7 +12,8 @@ def info():
         {
             'integrantes':[
             "Erick Maestri de Souza",
-            "Cecilia Lucchesi Mardegan"
+            "Cecilia Lucchesi Mardegan",
+            "Christine Von Schmalz"
             ] 
         }
     ])
@@ -21,6 +22,7 @@ def info():
 @APP.get("/metricas")
 def metricas():
     processo = psutil.Process(os.getpid())
+    # Process ID
     pid = processo.pid
 
     # Memória (MB)
@@ -29,11 +31,11 @@ def metricas():
     # Uso médio de CPU
     cpu = psutil.cpu_percent(interval=0.1)
 
-    # Sistema operacional
+    # S.O utilizado
     sis = platform.platform()
 
     return (
-        f"| Nome: Erick Maestri de Souza\n"
+        f"| Nome: Erick Maestri de Souza, Cecilia Lucchesi Mardegan, Christine Von Schmalz "
         f"| PID: {pid}\n"
         f"| Memória usada: {mem:.2f} MB\n"
         f"| CPU: {cpu:.2f}%\n"
