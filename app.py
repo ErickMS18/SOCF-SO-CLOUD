@@ -10,14 +10,13 @@ APP = Flask(__name__)
 def info():
     return json.dumps([
         {
-            'integrantes':[
-            "Erick Maestri de Souza",
-            "Cecilia Lucchesi Mardegan",
-            "Christine Von Schmalz"
+            'integrantes': [
+                "Erick Maestri de Souza",
+                "Cecilia Lucchesi Mardegan",
+                "Christine Von Schmalz"
             ] 
         }
     ])
-
 
 @APP.get("/metricas")
 def metricas():
@@ -42,4 +41,6 @@ def metricas():
         f"| Sistema Operacional: {sis}\n"
     )
 
-
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Porta definida pelo Render
+    APP.run(host="0.0.0.0", port=port)
